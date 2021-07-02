@@ -1,0 +1,20 @@
+sudo: required
+language: generic 
+services:
+  - docker
+
+before_install:
+  - docker build -t radjablonski01/docker_frontend_react -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true radjablonski01/docker_frontend_react npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: ""
+  app: ""
+  env: ""
+  bucket_name: ""
+  backet_path: ""
+  on:
+    branch: master

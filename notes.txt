@@ -1,0 +1,28 @@
+npm run test <- test react
+npm run run <- run react server
+npm run build <- build the react - compile the js files
+
+docker build -f Dockerfile.dev . <- to build the image
+
+docker run -it -p 3000:3000 IMAGE_ID <- to run image
+
+docker run -it 3bb59d14cc220c npm run test <- start docker image with the tests
+
+docker run -it -p 3000:3000 -v /app/node_modules -v $(pwd):/app c489761b36b6 <- run server with the live updates
+
+docker-compose up <- run the docker compose file -start the react server
+
+docker-compose up --build <- run docker compose and rebuild all the images also
+
+docker run -p 8080:80 50731b1aaad9b <- starting nginx with the port
+
+docker build . <- build image base on  dockerfile 
+
+docker run -p 8080:80 95ed34378701 <- start docker running Dockerfile the image we just created nginx and port
+
+git init
+git add .
+git commit -m "inital commit"
+git remote add origin https://github.com/radjablonski/frontend_react.git
+git push origin master
+
