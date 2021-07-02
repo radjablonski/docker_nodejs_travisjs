@@ -7,7 +7,7 @@ before_install:
   - docker build -t radjablonski01/docker_nodejs_travisjs -f Dockerfile.dev .
 
 script:
-  - docker run radjablonski01/docker_nodejs_travisjs npm run test -- --coverage
+  - docker run -e CI=true radjablonski01/docker_nodejs_travisjs npm run test
 
 deploy:
   provider: elasticbeanstalk
