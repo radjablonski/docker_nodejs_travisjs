@@ -22,7 +22,7 @@ docker run -p 8080:80 95ed34378701 <- start docker running Dockerfile the image 
 
 git init
 git add .
-git commit -m "inital commit"
-git remote add origin https://github.com/radjablonski/frontend_react.git
+git commit -m "initial commit"
+git remote add origin https://github.com/radjablonski/docker_nodejs_travisjs.git
 git push origin master
 
