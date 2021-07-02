@@ -6,15 +6,15 @@ services:
 before_install:
   - docker build -t radjablonski01/docker_nodejs_travisjs -f Dockerfile.dev .
 
-# script:
-#   - docker run -e CI=true radjablonski01/docker_nodejs_travisjs npm run test
+script:
+  - docker run -e CI=true radjablonski01/docker_nodejs_travisjs npm run test
 
-deploy:
-  provider: elasticbeanstalk
-  region: ""
-  app: ""
-  env: ""
-  bucket_name: ""
-  backet_path: ""
-  on:
-    branch: master
+# deploy:
+#   provider: elasticbeanstalk
+#   region: ""
+#   app: ""
+#   env: ""
+#   bucket_name: ""
+#   backet_path: ""
+#   on:
+#     branch: master
